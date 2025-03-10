@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retrieve Content - CloudShare</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>CloudShare</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="file-share.html">Share Files</a></li>
+          <li><a href="text-share.html">Share Text</a></li>
+          <li><a href="retrieve.html" class="active">Retrieve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Retrieve Shared Content</h2>
+      <p>Enter the URL of the shared content to retrieve it.</p>
+      
+      <form id="retrieve-form" class="retrieve-form">
+        <input type="url" id="url-input" placeholder="Enter shared URL" required>
+        <button type="submit" class="button primary-button">Retrieve</button>
+      </form>
+      
+      <div id="loading-indicator" class="loading-indicator" style="display:none">
+        <div class="spinner"></div>
+        <p>Loading content...</p>
+      </div>
+      
+      <div id="content-container" class="content-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 CloudShare. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="retrieve.js"></script>
+</body>
+</html>
+
