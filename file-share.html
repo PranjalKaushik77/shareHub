@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share Files - CloudShare</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>CloudShare</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="file-share.html" class="active">Share Files</a></li>
+          <li><a href="text-share.html">Share Text</a></li>
+          <li><a href="retrieve.html">Retrieve</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Share Files</h2>
+      <p>Upload and share files securely with Cloudinary storage.</p>
+      
+      <div id="drop-area">
+        <form class="upload-form">
+          <p>Drag and drop files here or</p>
+          <input type="file" id="fileElem" multiple accept="*/*" style="display:none">
+          <button type="button" class="button" onclick="document.getElementById('fileElem').click()">Select Files</button>
+        </form>
+      </div>
+      
+      <div id="file-list" class="file-list"></div>
+      
+      <button id="upload-button" class="button primary-button" disabled>Upload Files</button>
+      
+      <div id="upload-progress" class="progress-container" style="display:none">
+        <div class="progress">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+      
+      <div id="uploaded-files" class="uploaded-files"></div>
+      
+      
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 CloudShare. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="file-share.js"></script>
+  <script src="theme-toggle.js"></script>
+</body>
+</html>
+
